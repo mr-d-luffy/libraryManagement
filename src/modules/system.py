@@ -38,7 +38,7 @@ class system():
         return str(datetime.now().time())
     
 
-
+# testing of functions
 if __name__=="__main__":
     s = system()
     print(s.currentDate())

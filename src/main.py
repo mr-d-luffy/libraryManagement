@@ -90,6 +90,7 @@ class AdminLoginWindow(main):
         app.geometry("1000x600")
         app.mainloop()
 
+# execute app from here
 if __name__=="__main__":
     app = AdminLoginWindow()
     app.LoginWindow()

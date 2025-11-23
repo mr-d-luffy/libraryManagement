@@ -12,7 +12,7 @@ class library():
         ID = ''.join(sample(all, 8))
         return ID
 
-
+# testing of functions
 if __name__ == "__main__":
     l = library()
     print(l.createID())

@@ -79,7 +79,7 @@ class database():
         else:
             return False
 
-
+# testing of functions
 if __name__=="__main__":
     db = database()
     # print(db.adminLoginCheck("admin", "admin@123"))
