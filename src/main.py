@@ -11,6 +11,7 @@ try:
 except(Exception) as e:
     print(Fore.RED, "File Path Error", Fore.RESET)
 
+# main window ui class
 class main(Tk, system, database):
     def __init__(self):
         Tk.__init__(self)
@@ -91,6 +92,7 @@ class AdminLoginWindow(main):
         app.mainloop()
 
 # execute app from here
+# this code also runes at this file only
 if __name__=="__main__":
     app = AdminLoginWindow()
     app.LoginWindow()
