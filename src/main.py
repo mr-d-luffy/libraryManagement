@@ -1,6 +1,8 @@
+# modules for create app 
 from tkinter import *
 from json import load
 from colorama import Fore
+# private modules
 from modules.system import system
 from modules.database import database
 from modules.library import library
