@@ -1,8 +1,8 @@
 {
     "AppName": "Library Management",
-    "version": "2025.1",
+    "version": "2025.2",
     "date": "12-Sept-2025",
-    "developer":"mayuri bobade",
+    "developer":"Mohit shivankar",
     "path": [
         "main.py",
         "api/data.json",
