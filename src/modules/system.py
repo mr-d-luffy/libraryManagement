@@ -11,6 +11,7 @@ try:
 except(Exception) as e:
     print(Fore.RED, "File Path Error", Fore.RESET)
 
+# syatem class they control system tasks
 class system():
     # playsound using this method
     @staticmethod

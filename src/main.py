@@ -19,6 +19,7 @@ class main(Tk, system, database):
         database.__init__(self)
         library.__init__(self)
 
+    # main ui of app 
     def App(self):
         #customer Name input
         Label(text="Customer Name : ", fg=api["fontColor"], bg=api["background"]).place(x=10, y=15)
