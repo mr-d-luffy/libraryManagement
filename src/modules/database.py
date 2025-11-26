@@ -1,3 +1,4 @@
+# inbuilt modules of python
 import sqlite3 as sql
 from colorama import Fore
 from json import load
