@@ -14,6 +14,7 @@ except(Exception) as e:
     print(Fore.RED, "File Path Error", Fore.RESET)
 
 # main window ui class
+# connections of all modules
 class main(Tk, system, database):
     def __init__(self):
         Tk.__init__(self)
