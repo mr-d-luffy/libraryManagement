@@ -51,6 +51,10 @@ class main(Tk, system, database):
         E3 = Entry(fg=api["fontColor"], bg=api["background"])
         E3.place(x=340, y=50)
 
+        # Buttons for add book to user account
+        bt1 = Button(text="Add Book", fg="black", bg="white")
+        bt1.place(x=100, y=200)
+
 # Admin login window class
 class AdminLoginWindow(main): 
     # create ui for admin using this function
