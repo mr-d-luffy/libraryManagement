@@ -60,6 +60,8 @@ class main(Tk, system, database):
         self.destroy()
         app = main()
         Label(app, text="Book Name : ", bg=api["background"], fg=api["fontColor"]).place(x=10, y=10)
+        e1 = Entry(app, bg=api["background"], fg=api["fontColor"], insertbackground="white")
+        e1.place(x=100, y=10)
 
         app.title(api["AppName"])
         app.geometry("300x400")
