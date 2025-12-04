@@ -52,8 +52,21 @@ class main(Tk, system, database):
         E3.place(x=340, y=50)
 
         # Buttons for add book to user account
-        bt1 = Button(text="Add Book", fg="black", bg="white")
+        bt1 = Button(text="Add Book", fg="black", bg="white", command=self.addBookWindow)
         bt1.place(x=100, y=200)
+
+    # add book to user account using this function 
+    def addBookWindow(self):
+        self.destroy()
+        app = main()
+        l1 = Label(app, text="Book Name : ", bg=api["background"], fg=api["fontColor"])
+        l1.place(x=10, y=10)
+
+        app.title(api["AppName"])
+        app.geometry("300x400")
+        app.configure(bg=api["background"])
+        app.resizable(api["window"][0], api["window"][0])
+        app.mainloop()
 
 # Admin login window class
 class AdminLoginWindow(main): 
