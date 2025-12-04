@@ -59,8 +59,7 @@ class main(Tk, system, database):
     def addBookWindow(self):
         self.destroy()
         app = main()
-        l1 = Label(app, text="Book Name : ", bg=api["background"], fg=api["fontColor"])
-        l1.place(x=10, y=10)
+        Label(app, text="Book Name : ", bg=api["background"], fg=api["fontColor"]).place(x=10, y=10)
 
         app.title(api["AppName"])
         app.geometry("300x400")
