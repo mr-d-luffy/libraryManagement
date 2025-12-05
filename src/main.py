@@ -61,8 +61,8 @@ class main(Tk, system, database):
         app = main()
         Label(app, text="Book Name : ", bg=api["background"], fg=api["fontColor"]).place(x=10, y=10)
         #text field
-        e1 = Entry(app, bg=api["background"], fg=api["fontColor"], insertbackground="white")
-        e1.place(x=100, y=10)
+        self.e1 = Entry(app, bg=api["background"], fg=api["fontColor"], insertbackground="white")
+        self.e1.place(x=100, y=10)
         #button
         bt1 = Button(text="Submit", fg="black", bg="white", command=self.sbt)
         bt1.place(x=100, y=80)
@@ -76,7 +76,10 @@ class main(Tk, system, database):
     # this function connected with the addBookWindow Function's button
     # created for submit the data to database
     def sbt(self):
-        pass
+        bookName = self.e1.get()
+        bookID = library.createID()
+        dt = system.currentDate
+        database.addBook(bookName, bookID, dt)
 
 # Admin login window class
 class AdminLoginWindow(main): 
