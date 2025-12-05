@@ -60,14 +60,23 @@ class main(Tk, system, database):
         self.destroy()
         app = main()
         Label(app, text="Book Name : ", bg=api["background"], fg=api["fontColor"]).place(x=10, y=10)
+        #text field
         e1 = Entry(app, bg=api["background"], fg=api["fontColor"], insertbackground="white")
         e1.place(x=100, y=10)
+        #button
+        bt1 = Button(text="Submit", fg="black", bg="white", command=self.sbt)
+        bt1.place(x=100, y=80)
 
         app.title(api["AppName"])
-        app.geometry("300x400")
+        app.geometry("300x250")
         app.configure(bg=api["background"])
         app.resizable(api["window"][0], api["window"][0])
         app.mainloop()
+
+    # this function connected with the addBookWindow Function's button
+    # created for submit the data to database
+    def sbt(self):
+        pass
 
 # Admin login window class
 class AdminLoginWindow(main): 
