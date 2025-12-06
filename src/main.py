@@ -51,6 +51,9 @@ class main(Tk, system, database):
         E3 = Entry(fg=api["fontColor"], bg=api["background"])
         E3.place(x=340, y=50)
 
+        #date on ui 
+        Label(text="Date : "+system.currentDate(),fg=api["fontColor"], bg=api["background"]).place(x=10,y=170)
+
         # Buttons for add book to user account
         bt1 = Button(text="Add Book", fg="black", bg="white", command=self.addBookWindow)
         bt1.place(x=100, y=200)
