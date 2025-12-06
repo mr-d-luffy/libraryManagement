@@ -78,7 +78,7 @@ class main(Tk, system, database):
     def sbt(self):
         bookName = self.e1.get()
         bookID = library.createID()
-        dt = system.currentDate
+        dt = system.currentDate()
         database.addBook(bookName, bookID, dt)
 
 # Admin login window class
