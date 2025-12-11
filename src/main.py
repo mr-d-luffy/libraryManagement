@@ -79,10 +79,13 @@ class main(Tk, system, database):
     # this function connected with the addBookWindow Function's button
     # created for submit the data to database
     def sbt(self):
-        bookName = self.e1.get()
-        bookID = library.createID()
-        dt = system.currentDate()
-        database.addBook(self, bookName, bookID, dt)
+        try:
+            bookName = self.e1.get()
+            bookID = library.createID()
+            dt = system.currentDate()
+            database.addBook(self, bookName, bookID, dt)
+        except(Exception) as e:
+            print(Fore.RED, e, Fore.RESET)
 
 # Admin login window class
 class AdminLoginWindow(main): 
