@@ -82,7 +82,7 @@ class main(Tk, system, database):
         bookName = self.e1.get()
         bookID = library.createID()
         dt = system.currentDate()
-        database.addBook(bookName, bookID, dt)
+        database.addBook(self, bookName, bookID, dt)
 
 # Admin login window class
 class AdminLoginWindow(main): 
