@@ -60,14 +60,13 @@ class main(Tk, system, database):
 
     # add book to user account using this function 
     def addBookWindow(self):
-        self.destroy()
         app = main()
         Label(app, text="Book Name : ", bg=api["background"], fg=api["fontColor"]).place(x=10, y=10)
         #text field
         self.e1 = Entry(app, bg=api["background"], fg=api["fontColor"], insertbackground="white")
         self.e1.place(x=100, y=10)
         #button
-        bt1 = Button(text="Submit", fg="black", bg="white", command=self.sbt)
+        bt1 = Button(app, text="Submit", fg="black", bg="white", command=self.sbt)
         bt1.place(x=100, y=80)
 
         app.title(api["AppName"])
