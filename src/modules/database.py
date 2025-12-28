@@ -9,7 +9,6 @@ try:
 except(Exception) as e:
     print(Fore.RED, "File Path Error", Fore.RESET)
 
-
 # database class with all functions
 class database():
     # connection and initization of database
