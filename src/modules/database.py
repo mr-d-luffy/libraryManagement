@@ -9,7 +9,6 @@ try:
 except(Exception) as e:
     print(Fore.RED, "File Path Error", Fore.RESET)
 
-
 # database class with all functions
 class database():
     # connection and initization of database
@@ -33,40 +32,40 @@ class database():
         self.c.execute(f"CREATE TABLE IF NOT EXISTS usersX (name text, id text, contact text, city text, pincode text)")
         self.c.execute(f"INSERT INTO usersX VALUES (?, ?, ?, ?)", (userName, userID, contact, city, pincode))
         self.connection.commit()
-        self.connection.close()
+        # self.connection.close()
 
     # Delete user from database
     def deleteUser(self, userID):
         self.c.execute(f"DROP TABLE {userID}")
         self.c.execute(f"DELETE * FROM usersX WHERE id = {userID}")
         self.connection.commit()
-        self.connection.close()
+        # self.connection.close()
     
     # add new book to database
     def addBook(self, bookName, bookID, dateTime):
         self.c.execute(f"CREATE TABLE IF NOT EXISTS booksX (bookName text, bookID text, dateTime text)")
         self.c.execute(f"INSERT INTO booksX VALUES (?, ?, ?)", (bookName, bookID, dateTime))
         self.connection.commit()
-        self.connection.close()
+        # self.connection.close()
 
     # Delete outdated books from database
     def deleteBook(self, bookID):
         self.c.execute(f"DELETE * FROM booksX WHERE bookID = {bookID}")
         self.connection.commit()
-        self.connection.close()
+        # self.connection.close()
     
     # This function work for issue book to user
     def borrowBook(self, userID, bookName, bookID, dateTime):
         self.c.execute(f"CREATE TABLE IF NOT EXISTS {userID} (bookName text, bookID text, dateTime text)")
         self.c.execute(f"INSERT INTO {userID} VALUES (?, ?, ?)", (bookName, bookID, dateTime))
         self.connection.commit()
-        self.connection.close()
+        # self.connection.close()
 
     # This function work for unissue book from user
     def unborrowBook(self, userID, bookName, bookID):
         self.c.execute(f"DELETE * FROM {userID} WHERE bookID = {bookID} OR bookName = {bookName}")
         self.connection.commit()
-        self.connection.close()
+        # self.connection.close()
 
     # check login status from database
     def adminLoginCheck(self, userName, userPassword):
