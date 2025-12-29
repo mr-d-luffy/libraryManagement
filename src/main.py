@@ -60,20 +60,21 @@ class main(Tk, system, database):
 
     # add book to user account using this function 
     def addBookWindow(self):
-        app = main()
-        Label(app, text="Book Name : ", bg=api["background"], fg=api["fontColor"]).place(x=10, y=10)
+        global appx
+        appx = main()
+        Label(appx, text="Book Name : ", bg=api["background"], fg=api["fontColor"]).place(x=10, y=10)
         #text field
-        self.e1 = Entry(app, bg=api["background"], fg=api["fontColor"], insertbackground="white")
+        self.e1 = Entry(appx, bg=api["background"], fg=api["fontColor"], insertbackground="white")
         self.e1.place(x=100, y=10)
         #button
-        bt1 = Button(app, text="Submit", fg="black", bg="white", command=self.sbt)
+        bt1 = Button(appx, text="Submit", fg="black", bg="white", command=self.sbt)
         bt1.place(x=100, y=80)
 
-        app.title(api["AppName"])
-        app.geometry("300x250")
-        app.configure(bg=api["background"])
-        app.resizable(api["window"][0], api["window"][0])
-        app.mainloop()
+        appx.title(api["AppName"])
+        appx.geometry("300x250")
+        appx.configure(bg=api["background"])
+        appx.resizable(api["window"][0], api["window"][0])
+        appx.mainloop()
 
     # this function connected with the addBookWindow Function's button
     # created for submit the data to database
@@ -83,8 +84,10 @@ class main(Tk, system, database):
             bookID = library.createID()
             dt = system.currentDate()
             database.addBook(self, bookName, bookID, dt)
+            appx.destroy()
         except(Exception) as e:
             print(Fore.RED, e, Fore.RESET)
+
 
 # Admin login window class
 class AdminLoginWindow(main): 
